@@ -86,18 +86,19 @@ function bandingkanAngka(angka1, angka2) {
   ]
   
 
-const dataHandling = (params) => {
-  for (let i = 0; i < params.length; i++) {
-    const [id, nama, kota, tanggal, hobi] = params[i];
-    
+  const dataHandling = (params) => {
+    let hasil = "";
+    for (let i = 0; i < params.length; i++) {      
 
-    console.log(`
-    Nomor ID:  ${id}
-    Nama Lengkap:  ${nama}
-    TTL:  ${kota} ${tanggal}
-    Hobi:  ${hobi}
-    `);
+      hasil += `
+        Nomor ID: ${params[i][0]}
+        Nama Lengkap: ${params[i][1]}
+        TTL: ${params[i][2]} ${params[i][3]}
+        Hobi: ${params[i][4]}
+    `
+    }
+
+    return hasil
   }
-}
-  
-dataHandling(input);
+    
+  console.log(dataHandling(input));
