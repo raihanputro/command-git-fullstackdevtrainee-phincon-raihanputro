@@ -59,6 +59,8 @@ Memindahkan HEAD pointer dan menghapus seluruh perubahan di commit sebelumnya (d
 Apabila ada yang kurang di commit sebelumnya yang baru di commit, akan di merger oleh commit yang baru
 - **git checkout id_hash – nama_file**<br />
 Melihat perubahan pada sebuah file di commit tertentu dan file tersebut masuk ke staged area
+- **git branch nama_branch**<br />
+Membuat sebuah branch
 - **git branch –show-current**<br />
 Melihat branch saat ini
 - **git checkout id_hash**<br />
