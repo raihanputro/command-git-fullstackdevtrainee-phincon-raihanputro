@@ -1,4 +1,4 @@
-# COMMAND GIT FULLSTACK DEVELOPER TRAINEE PHINCON <br /> RAIHAN PUTRO MAULANA RIZKY
+# GIT COMMAND FULLSTACK DEVELOPER TRAINEE PHINCON <br /> RAIHAN PUTRO MAULANA RIZKY
 - **git init** <br />
 Inisialisasi git pada folder
 - **git clone repo_url** <br />
