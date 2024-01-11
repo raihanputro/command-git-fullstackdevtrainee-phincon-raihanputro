@@ -16,17 +16,6 @@ body {
     margin: 0;
 }
 
-sub {
-    font-size: 14px;
-    font-weight: normal;
-    font-family: 'Open Sans', sans-serif;
-}
-
-/* body section {
-    max-width: 1440px;
-        
-} */
-
 nav {
     background-color: rgba(0,0,0,0.80);
     font-family: sans-serif;
@@ -209,7 +198,7 @@ nav {
 }
 
 #about {
-    background-image: url("../image/bg\ image\ 2.png");
+    background-image: radial-gradient(ellipse closest-corner at center, rgba(0, 0, 0, 0) 10%, #080A0B 80%), url("../image/bg\ image\ 2.png");
     background-size: cover;
     width: 100%;
     height: 100vh;
@@ -319,7 +308,7 @@ nav {
     margin: 0;
 }
 
-.feature {
+.feature__various-title {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -329,6 +318,11 @@ nav {
     width: 50%;
     position: relative;
 }
+
+.features__various-title svg circle{
+    padding-top: -100%;
+}
+
 
 .feature__various-title p {
     color: #FFB548;
@@ -589,6 +583,7 @@ nav {
 
 .newsletter__bg {
     background-image: url("../image/bg\ image\ 6.png");
+    background-size: cover;
     width: 445.466px;
     height: 694.408px;
     flex-shrink: 0;
@@ -709,7 +704,7 @@ footer {
 }
 
 footer .footer {
-    margin-bottom: 15px;
+
     display: flex;
     flex-direction: row;
     justify-content: end;
