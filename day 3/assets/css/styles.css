@@ -22,11 +22,10 @@ sub {
     font-family: 'Open Sans', sans-serif;
 }
 
-body section {
+/* body section {
     max-width: 1440px;
-    height: 960px;
-}
-
+        
+} */
 
 nav {
     background-color: rgba(0,0,0,0.80);
@@ -39,13 +38,15 @@ nav {
     justify-content: center;
     z-index: 10;
 }
-nav > div {
+
+.header {
     width: 80%;
     height: 70px;
     display: flex;
     align-items: center;
     position: relative;
 }
+
 button {
     font-size: 18px;
     font-weight: bold;
@@ -60,8 +61,20 @@ button {
     -o-border-radius: 4px;
     cursor: pointer;
 }
+
 button:hover {
     background: linear-gradient(195deg, #FFB548 11.27%, #a17626 90.4%);
+}
+
+nav {
+    font-family: 'Open Sans';
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+    text-align: right;
+    padding-left: 30px;
+    text-transform: uppercase;
 }
 
 .logo {
@@ -116,27 +129,19 @@ button:hover {
     transition-duration: 200ms;
 }
 
-#main {
-    background-image: radial-gradient(136.03% 54.57% at 50% 48.04%,rgba(255, 255, 255, 0) 0%,rgba(0, 0, 0, 0) 60.63%,#080a0b 99.74%),
-    url("../image/bg\ image\ 1.png");
-}
-
-nav {
-    font-family: 'Open Sans';
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 16px;
-    letter-spacing: 0.1em;
-    text-align: right;
-    padding-left: 30px;
-    text-transform: uppercase;
-}
-
 .bg-image {
     position: absolute;
     z-index: -1;
 }
 
+#main {
+    background-image: radial-gradient(136.03% 54.57% at 50% 48.04%,rgba(255, 255, 255, 0) 0%,rgba(0, 0, 0, 0) 60.63%,#080a0b 99.74%),
+    url("../image/bg\ image\ 1.png");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    min-height: 450px;
+}
 
 .main__title {
     display: flex;
@@ -205,6 +210,10 @@ nav {
 
 #about {
     background-image: url("../image/bg\ image\ 2.png");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    min-height: 450px;
 }
 
 #about .about__post {
@@ -275,6 +284,9 @@ nav {
 #features    {
     background-image: url("../image/bg\ image\ 3.png");
     background-size: cover;
+    width: 100%;
+    height: 100vh;
+    min-height: 450px;
 }
 
 .features__post {
@@ -341,6 +353,9 @@ nav {
 #req {
     background-image: url("../image/bg\ image\ 4.png");
     background-size: cover;
+    width: 100%;
+    height: 100vh;
+    min-height: 450px;
 }
 
 #req h3 {
@@ -440,6 +455,9 @@ nav {
 #quotes {
     background-image: url("../image/bg\ image\ 5.png");
     background-size: cover;
+    width: 103%;
+    height: 100vh;
+    min-height: 450px;
 }
 
 .quotes__post {
@@ -564,6 +582,9 @@ nav {
 
 #newsletter {
     background-color: #080A0B;
+    width: 100%;
+    height: 100vh;
+    min-height: 450px;
 }
 
 .newsletter__bg {
