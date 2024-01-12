@@ -6,11 +6,14 @@
     --background-input-color: #181f32;
     --background-number-toggle: #252d42;
     --background-main-op: #eae3db;
-    --background-sec-op: #647299;
     --background-dot-eq-color: #d63d2d;
-    --text-one-color: #fdfdfc;
+    --background-del: #647299;
+    --background-reset: #647299;
+    --text-eq-color: #ffffff;
+    --text-top-color: white;
+    --text-one-color: #485059;
     --text-two-color: #485059; 
-    --text-del-reset-color: #647299;
+    --text-del-reset-color: #ffffff;
     --pos-dot: 9px;
     --box-shadow: 0 4px 0 0 #bbb6af;
     --box-shadow-del-reset: 0 4px 0 0 #424e75;
@@ -22,8 +25,12 @@
     --background-input-color: #eeeeee;
     --background-number-toggle: #d3cdcd;
     --background-main-op: #eae3db;
-    --background-sec-op: #378287;
     --background-dot-eq-color: #c85401;
+    --background-del: #378287;
+    --background-reset: #378287;
+    --background-dot-eq-color: #c85401;
+    --text-eq-color: white;
+    --text-top-color: #3a3a31;
     --text-one-color: #3a3a31;
     --text-two-color: #34332e; 
     --text-three-color: #ffff; 
@@ -31,7 +38,7 @@
     --pos-dot: 40px;
     --box-shadow: 0 4px 0 0 #bbb6af;
     --box-shadow-del-reset: 0 4px 0 0 #1c6167;
-    --box-shadow-eq: 0 4px 0 0;
+    --box-shadow-eq: 0 4px 0 0 #913901; 
 
 }
 
@@ -40,13 +47,19 @@
     --background-input-color: #1e0836;
     --background-number-toggle: #1e0837;
     --background-main-op: #331b4d;
+    --background-del: #56077c;
+    --background-reset: #56077c;
+    --background-dot-eq-color: #00decf;
+    --text-eq-color: black;
+    --text-top-color: #ffe443;
     --text-one-color: #ffe443;
     --text-two-color: #34332e; 
+    --text-del-reset-color: white;
     --text-del-reset-color: #fffcff;
     --pos-dot: 75px;
-    --box-shadow: 0 4px 0 0 #bbb6af;
-    --box-shadow-del-reset: 0 4px 0 0;
-    --box-shadow-eq: 0 4px 0 0;
+    --box-shadow: 0 4px 0 0 #831d9b;
+    --box-shadow-del-reset: 0 4px 0 0 #bf16f5;
+    --box-shadow-eq: 0 4px 0 0 #59fcf2;
 }
 
 * {
@@ -90,7 +103,7 @@ nav {
 
 .logo {
     margin-top: 8%;
-    color: var(--text-one-color);
+    color: var(--text-top-color);
 }
 
 .theme-switch {
@@ -100,7 +113,7 @@ nav {
 }
 
 .theme-switch p {
-    color: var(--text-one-color);
+    color: var(--text-top-color);
     font-weight: 600;
     display: flex;
     padding-top: 20%;
@@ -123,7 +136,7 @@ nav {
     font-weight: bolder;
     border: none;
     background: none;
-    color: var(--text-one-color);
+    color: var(--text-top-color);
 }
 
 .theme-icon {
@@ -132,7 +145,6 @@ nav {
     align-items: center;
     position: relative;
 }
-
 
 .oval {
     height: 30px;
@@ -151,7 +163,7 @@ nav {
     margin-bottom: 10px;
     font-size: 25px;
     font-weight: bolder;
-    color: var(--text-one-color);
+    color: var(--text-top-color);
     background-color: var(--background-input-color);
     pointer-events: none;
 }
@@ -164,18 +176,9 @@ nav {
 
 .calc-bottom {
     display: grid;
-    color: var(--text-one-color);
     grid-gap: 10px;
     margin-top: 10px;
     grid-template-columns: repeat(2, 1fr);
-}
-
-.delset {
-    box-shadow: var(--box-shadow-del-reset);
-}
-
-.eq {
-    box-shadow: var(--box-shadow-eq);
 }
 
 .buttons {
@@ -193,22 +196,15 @@ nav {
 
 .main-op {
     background-color: var(--background-main-op);
-    color: var(--text-two-color);
+    color: var(--text-one-color);
     box-shadow: var(--box-shadow);
 }
 
-.sec-op {
-    background-color: var(--background-sec-op);
-    color: var(--text-one-color);   
-}
 
 .buttons button:active {
     transform: scale(0.99);
 }
 
-.dot, .eq {
-    background-color: var(--background-dot-eq-color);
-}
 
 .dot-theme {
     display: flex;
@@ -218,20 +214,20 @@ nav {
     position: relative;
 }
 
-.dot-blue {
+#dot-blue {
     height: 17px;
     width: 17px;
     border-radius: 50%;
     display: inline-block;
     position: absolute;
     cursor: pointer;
-    background-color: red;
+    background-color: var(--background-dot-eq-color);
     left: 9px;
     border: none;
     outline: none;
 }
 
-.dot-brown {
+#dot-brown {
     height: 17px;
     width: 17px;
     border-radius: 50%;
@@ -239,12 +235,12 @@ nav {
     position: absolute;
     left: 40px;
     cursor: pointer;
-    background-color: red;
+    background-color: var(--background-dot-eq-color);
     border: none;
     outline: none;
 }
 
-.dot-purple {
+#dot-purple {
     height: 17px;
     width: 17px;
     border-radius: 50%;
@@ -252,16 +248,29 @@ nav {
     position: absolute;
     left: 75px;
     cursor: pointer;
-    background-color: red;
+    background-color: var(--background-dot-eq-color);
     border: none;
     outline: none;
 }
 
 .hidden {
-    display: none;
+    background-color: transparent;
 }
 
+.del {
+    background-color: var(--background-del);
+    color: var(--text-del-reset-color);
+    box-shadow: var(--box-shadow-del-reset);
+}
 
-.test {
-    background-color: transparent;
+.res {
+    background-color: var(--background-reset);
+    color: var(--text-del-reset-color);
+    box-shadow: var(--box-shadow-del-reset);
+}
+
+.eq {
+    background-color: var(--background-dot-eq-color);
+    color: var(--text-eq-color);
+    box-shadow: var(--box-shadow-eq);
 }

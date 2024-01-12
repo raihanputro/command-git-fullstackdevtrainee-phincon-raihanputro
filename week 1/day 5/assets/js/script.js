@@ -25,13 +25,14 @@ buttons.forEach((button) => {
 const pressedButtonSelector = '[data-theme][aria-pressed="true"]';
 const defaultTheme = 'blue';
 
+
+
 const applyTheme = (theme) => {
   const target = document.querySelector(`[data-theme="${theme}"]`);
   document.documentElement.setAttribute("data-selected-theme", theme);
   document.querySelector(pressedButtonSelector).setAttribute('aria-pressed', 'false');
-  document.querySelector(pressedButtonSelector).classList.add("test");
   target.setAttribute('aria-pressed', 'true');
-  target.classList.remove("test");
+
 };
 
 const handleThemeSelection = (event) => {
@@ -55,7 +56,7 @@ const setInitialTheme = () => {
 setInitialTheme();
 
 const themeNumbers = document.querySelector('.dot-theme');
-const buttonNumbers = themeNumbers.querySelectorAll('span');
+const buttonNumbers = themeNumbers.querySelectorAll('button');
 
 buttonNumbers.forEach((button) => {
    button.addEventListener('click', handleThemeSelection);
