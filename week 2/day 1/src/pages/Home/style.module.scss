@@ -1,0 +1,9 @@
+@import '../../styles/base.scss';
+
+.countdowncontainer {
+    @include flexColumn;
+    @include center;
+    margin-top: 10%;
+    width: 100%;
+    position: relative;
+}

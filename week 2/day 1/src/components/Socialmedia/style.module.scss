@@ -1,0 +1,22 @@
+@import '../../styles/base.scss';
+
+.countdownfooter {
+    position: relative;
+
+    .countdownsocial {
+        @include flexRow;
+        gap: 40px;
+
+        img {
+            width: 30px;
+        }
+    }
+
+    .footerimg {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: -100;
+    }
+}

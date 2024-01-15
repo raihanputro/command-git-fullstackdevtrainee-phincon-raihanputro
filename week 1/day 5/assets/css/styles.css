@@ -63,7 +63,7 @@
 }
 
 * {
-    margin: 0;
+    margin: 0;  
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
@@ -253,9 +253,6 @@ nav {
     outline: none;
 }
 
-.hidden {
-    background-color: transparent;
-}
 
 .del {
     background-color: var(--background-del);

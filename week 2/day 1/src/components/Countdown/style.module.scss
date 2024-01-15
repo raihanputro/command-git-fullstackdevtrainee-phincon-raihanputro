@@ -1,0 +1,48 @@
+@import '../../styles/base.scss';
+
+.countdown {
+    width: 100%;
+    @include flexColumn;
+    @include center;
+    position: relative;
+
+    .countdowntimer {
+        @include flexRow;
+        gap: 100px;
+        margin-top: 7%;
+        margin-bottom: 20%;
+        @include md-size {
+            position: relative;
+            gap: 50px
+        }
+    
+        section {
+            @include flexColumn;
+            @include center;
+    
+            h1 {
+                display: flex;
+                justify-content: center;
+                color: $color-primary-red;
+                font-size: 100px;
+                background: linear-gradient(to top, $color-neutral-dark-blue 50%, #282f42 50%);
+                width: 170px;
+                height: 140px;
+                border-radius: 10px;
+                @include md-size {
+                    font-size: 20px;
+                }
+            }
+    
+            p {
+                margin-top: 10%;
+                color: $color-neutral-white;
+                font-size: 20px;
+            }
+        }
+    }  
+    
+}
+
+
+

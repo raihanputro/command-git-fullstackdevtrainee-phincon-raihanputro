@@ -1,0 +1,16 @@
+@import '../../styles/base.scss';
+
+.countdowntitle {
+    h1 {
+        color: $color-neutral-white;
+        font-weight: 700;
+        font-size: 20px;
+        letter-spacing: 10px;
+        @include md-size {
+            font-size: 20px;
+            width: 90%;
+            text-align: center;
+            margin-left: 7%;
+        }
+    }
+}

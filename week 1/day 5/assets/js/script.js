@@ -25,8 +25,6 @@ buttons.forEach((button) => {
 const pressedButtonSelector = '[data-theme][aria-pressed="true"]';
 const defaultTheme = 'blue';
 
-
-
 const applyTheme = (theme) => {
   const target = document.querySelector(`[data-theme="${theme}"]`);
   document.documentElement.setAttribute("data-selected-theme", theme);
