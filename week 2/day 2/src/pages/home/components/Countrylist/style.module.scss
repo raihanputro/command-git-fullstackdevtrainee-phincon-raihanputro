@@ -1,0 +1,32 @@
+@import '../../../../styles/base.scss';
+
+
+.contentContainer {
+    margin-top: 4%;
+
+    .searchFilter {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .countryListContainer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 100px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3%;
+        @include xl-size {
+            grid-template-columns: repeat(3, 1fr);
+        };
+        @include lg-size {
+            grid-template-columns: repeat(2, 1fr);
+        };
+        @include md-size {
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 10px;
+        }
+    }
+}
+

@@ -1,0 +1,10 @@
+@import '../../../../styles/base.scss';
+
+.button {
+    width: 100px;
+    color: black;
+    margin-left: 100%;
+    .buttonIcon {
+        margin-right: 5px;
+    }
+}

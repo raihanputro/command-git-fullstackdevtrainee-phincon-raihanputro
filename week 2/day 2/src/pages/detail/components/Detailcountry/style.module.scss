@@ -1,0 +1,50 @@
+@import '../../../../styles/base.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    position: relative;
+
+    .button {
+        position: absolute;
+        left: 10%;
+    }
+}
+
+.detailCountryContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 200px;
+    margin-top: 4%;
+    font-family: $font-main;
+
+    .flagCountry {
+        width: 555px;
+        height: 400px;
+    }
+
+    .countryName {
+        margin-bottom: 6%;
+    }
+
+    .countryDescContainer {
+        display: flex;
+        flex-direction: row;
+        gap: 100px;
+    }
+
+    b {
+        color: $color-primary-black;
+    }
+}

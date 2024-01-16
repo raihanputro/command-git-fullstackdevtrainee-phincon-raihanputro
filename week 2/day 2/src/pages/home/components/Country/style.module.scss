@@ -1,0 +1,22 @@
+@import '../../../../styles/base.scss';
+
+.countryContainer {
+    width: 265px;
+    height: 265px;
+    font-family: $font-main;
+    justify-content: center;
+    align-items: center;
+
+    .countryTitle {
+        font-weight: bolder;
+        margin-bottom: 2%;
+    }
+
+    .countryDesc {
+        margin-bottom: 1%;
+    }
+
+    b {
+        color: $color-primary-black;
+    }
+}

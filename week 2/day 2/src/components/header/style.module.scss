@@ -1,0 +1,22 @@
+@import '../../styles/base.scss';
+
+.header {
+    background-color: $color-primary-white;
+    color: $color-primary-black;
+    font-family: $font-main;
+    width: 100%;
+
+    .headerTitle {
+        font-family: $font-title;
+        font-weight: bolder;
+        cursor: pointer;
+    }
+
+    .headerButton {
+        text-transform: capitalize;
+
+        .moonIcon {
+            padding-right: 10%;
+        }
+    }
+}
